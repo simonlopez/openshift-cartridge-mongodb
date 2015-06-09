@@ -15,10 +15,10 @@ function start() {
     client_result 'MongoDB is already running.'
   else
     client_message 'Starting MongoDB...'
-    nohup ${OPENSHIFT_DATA_DIR}.mongodb/bin/mongod \
+    nohup ${OPENSHIFT_DATA_DIR}mongodb/bin/mongod \
       --nounixsocket                               \
       --storageEngine wiredTiger                   \
-      --dbpath ${OPENSHIFT_DATA_DIR}.mongodb/data  \
+      --dbpath ${OPENSHIFT_DATA_DIR}mongodb/data  \
       --bind_ip $OPENSHIFT_MONGODB_IP              \
       --quiet                                      \
       --logRotate reopen                           \
